@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style>
+            .chess-board { border-spacing: 0; border-collapse: collapse; }
+            .chess-board th { padding: 0.5em; }
+            .chess-board td {border: 1px solid; width: 2.5em; height: 2.5em;}
+            .chess-board .doublew { background: #FA8072; }
+            .chess-board .triplew { background: red; }
+            .chess-board .doublel { background: #009DFF; }
+            .chess-board .triplel { background: #2200FF; }
+            .chess-board .normal { background: green; }
+            .chess-board .tile { border: 1px solid; width:2.5em; height:2.5em; position: relative;left:100px}
+        </style>
+    </head>
+    <body>
+        <table class="chess-board">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>13</th>
+                    <th>14</th>
+                    <th>15</th>
+                </tr>
+                <tr>
+                    <th>A</th>
+                    <td class="triplew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplew"></td>
+                </tr>
+                <tr>
+                    <th>B</th>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>C</th>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>D</th>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                </tr>
+                <tr>
+                    <th>E</th>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>G</th>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>H</th>
+                    <td class="triplew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplew"></td>
+                </tr>
+                <tr>
+                    <th>I</th>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>J</th>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>K</th>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>L</th>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                </tr>
+                <tr>
+                    <th>M</th>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>N</th>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublew"></td>
+                    <td class="normal"></td>
+                </tr>
+                <tr>
+                    <th>O</th>
+                    <td class="triplew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplew"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="doublel"></td>
+                    <td class="normal"></td>
+                    <td class="normal"></td>
+                    <td class="triplew"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

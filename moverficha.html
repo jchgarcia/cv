@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <<img src="C:\Users\jchga\Downloads\web development\html-personal site\A_tile.png" alt="A">
+
+  // register events
+canvas.onmousedown = handleOnMouseDown;
+canvas.onmouseup = handleOnMouseUp;
+canvas.onmouseout = handleOnMouseOut;
+canvas.onmousemove = handleOnMouseMove;
+function handleOnMouseDown(e) {
+
+   // remove old selected
+   if (selectedBlock != null) {
+
+       imageBlockList[selectedBlock.no].isSelected = false;
+
+   }
+
+   selectedBlock = GetImageBlock(imageBlockList, e.pageX, e.pageY);
+
+   if (selectedBlock) {
+       imageBlockList[selectedBlock.no].isSelected = true;
+   }
+
+}
+</body>
+
+</html>
